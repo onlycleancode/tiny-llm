@@ -24,6 +24,13 @@ and performance baseline.
 
 The course follows a four-week learning path:
 
+- **Week 0: Prerequisites (optional).** Seven NumPy-only days that build the
+  foundation the book assumes: numerics and BF16, array programming,
+  backpropagation, a tiny autodiff engine, BPE tokenization and sampling, a
+  transformer block, and inference arithmetic (KV-cache sizing, rooflines,
+  group-wise 4-bit quantization, tiling). Run with
+  `pdm run test --week 0 --day N`; no Apple silicon or model download needed.
+  The Deep Learning Systems homework is included under `prereqs/` as submodules.
 - **Week 1: From Matmul to Text.** Build a Qwen3 model directly from `mlx.core`
   array operations: attention, RoPE, GQA, RMSNorm, the MLP, sampling, and
   the autoregressive loop.
@@ -101,6 +108,13 @@ one explicit byte range through the existing loop.
 
 | Week + Chapter | Topic | Code | Test | Doc | Audit |
 |---|---|---|---|---|---|
+| 0.1 | Numerics and Linear Algebra | ✅ | ✅ | ✅ | 🚧 |
+| 0.2 | Array Programming | ✅ | ✅ | ✅ | 🚧 |
+| 0.3 | Neural Networks and Backpropagation | ✅ | ✅ | ✅ | 🚧 |
+| 0.4 | A Tiny Autodiff Engine | ✅ | ✅ | ✅ | 🚧 |
+| 0.5 | Tokens and Language Models | ✅ | ✅ | ✅ | 🚧 |
+| 0.6 | The Transformer Block | ✅ | ✅ | ✅ | 🚧 |
+| 0.7 | Inference Systems Math | ✅ | ✅ | ✅ | 🚧 |
 | 1.1 | Attention | ✅ | ✅ | ✅ | ✅ |
 | 1.2 | RoPE | ✅ | ✅ | ✅ | ✅ |
 | 1.3 | Grouped Query Attention | ✅ | ✅ | ✅ | ✅ |

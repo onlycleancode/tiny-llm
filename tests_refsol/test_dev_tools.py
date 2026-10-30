@@ -83,7 +83,10 @@ def test_non_positive_week_day_selection_fails_closed(tmp_path, command, selecto
     if len(selectors) == 2:
         assert "Please provide both week and day" in result.stdout
     else:
-        assert "Week and day must be positive integers" in result.stdout
+        assert (
+            "Week must be a non-negative integer and day a positive integer"
+            in result.stdout
+        )
 
 
 def test_copy_test_missing_source_fails_closed(tmp_path):
@@ -109,8 +112,8 @@ def test_copy_test_missing_source_fails_closed(tmp_path):
 @pytest.mark.parametrize(
     "selectors",
     [
-        ("--week", "0", "--day", "1"),
         ("--week", "1", "--day", "0"),
+        ("--week", "0", "--day", "0"),
         ("--week", "-1", "--day", "1"),
     ],
 )
@@ -123,7 +126,10 @@ def test_copy_test_non_positive_selection_fails_closed(tmp_path, selectors):
         check=False,
     )
     assert result.returncode == 1
-    assert "Week and day must be positive integers" in result.stdout
+    assert (
+        "Week must be a non-negative integer and day a positive integer"
+        in result.stdout
+    )
 
 
 def test_missing_command_fails_closed(tmp_path):
@@ -181,3 +187,27 @@ def test_week_4_day_selection_refreshes_and_runs_every_day_so_far(tmp_path):
     assert (learner / "test_week_4_day_2.py").read_bytes() == (
         supplied / "test_week_4_day_2.py"
     ).read_bytes()
+
+
+@pytest.mark.parametrize("command", ["test", "copy-test"])
+def test_week_0_prerequisites_are_selectable(tmp_path, command):
+    supplied = tmp_path / "tests_refsol"
+    learner = tmp_path / "tests"
+    supplied.mkdir()
+    learner.mkdir()
+    (supplied / "test_week_0_day_1.py").write_text(
+        'def test_week_0():\n    print("WEEK-0-MARKER")\n', encoding="utf-8"
+    )
+    extra = ["--", "-q", "-s"] if command == "test" else []
+    result = subprocess.run(
+        [sys.executable, str(DEV_TOOLS), command, "--week", "0", "--day", "1", *extra],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert (learner / "test_week_0_day_1.py").exists()
+    if command == "test":
+        assert "WEEK-0-MARKER" in result.stdout
+        assert "1 passed" in result.stdout

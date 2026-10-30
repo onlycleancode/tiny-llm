@@ -62,6 +62,10 @@ format-cpp.shell = "find src/extensions -type file \\( -name '*.h' -or -name '*.
 copy-test.cmd = "python scripts/dev-tools.py copy-test"
 book.cmd = "mdbook serve book/"
 
+[tool.ruff]
+# Week 0 external homework (Git submodules) keeps its own style.
+extend-exclude = ["prereqs"]
+
 [tool.pytest.ini_options]
 addopts = ["--import-mode=importlib"]
 pythonpath = ["src", "."]

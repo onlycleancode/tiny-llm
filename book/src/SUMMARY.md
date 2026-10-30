@@ -5,6 +5,15 @@
 
 ---
 
+- [Week 0: Prerequisites](./week0-overview.md)
+    - [Numerics and Linear Algebra](./week0-01-numerics.md)
+    - [Array Programming](./week0-02-arrays.md)
+    - [Neural Networks and Backpropagation](./week0-03-neural-networks.md)
+    - [A Tiny Autodiff Engine](./week0-04-autodiff.md)
+    - [Tokens and Language Models](./week0-05-language-modeling.md)
+    - [The Transformer Block](./week0-06-transformer-block.md)
+    - [Inference Systems Math](./week0-07-inference-math.md)
+    - [External Coursework](./week0-external-coursework.md)
 - [Week 1: From Matmul to Text](./week1-overview.md)
     - [Attention and Multi-Head Attention](./week1-01-attention.md)
     - [Positional Encodings and RoPE](./week1-02-positional-encodings.md)

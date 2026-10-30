@@ -4,6 +4,15 @@ https://skyzh.github.io/tiny-llm/glossary
 https://skyzh.github.io/tiny-llm/preface
 https://skyzh.github.io/tiny-llm/setup
 https://skyzh.github.io/tiny-llm/sponsor
+https://skyzh.github.io/tiny-llm/week0-01-numerics
+https://skyzh.github.io/tiny-llm/week0-02-arrays
+https://skyzh.github.io/tiny-llm/week0-03-neural-networks
+https://skyzh.github.io/tiny-llm/week0-04-autodiff
+https://skyzh.github.io/tiny-llm/week0-05-language-modeling
+https://skyzh.github.io/tiny-llm/week0-06-transformer-block
+https://skyzh.github.io/tiny-llm/week0-07-inference-math
+https://skyzh.github.io/tiny-llm/week0-external-coursework
+https://skyzh.github.io/tiny-llm/week0-overview
 https://skyzh.github.io/tiny-llm/week1-01-attention
 https://skyzh.github.io/tiny-llm/week1-02-positional-encodings
 https://skyzh.github.io/tiny-llm/week1-03-gqa

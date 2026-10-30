@@ -18,6 +18,11 @@ You should understand the basics of deep learning and be familiar with PyTorch. 
 - CMU [Introduction to Machine Learning](https://www.cs.cmu.edu/~mgormley/courses/10601/) — covers the fundamentals of machine learning.
 - CMU [Deep Learning Systems](https://dlsyscourse.org) — teaches you how to build a framework like PyTorch from scratch.
 
+[Week 0: Prerequisites](./week0-overview.md) turns these prerequisites into exercises in the same format as the rest of
+the course: seven days of NumPy-only tasks with supplied tests, covering numerics, array programming, backpropagation,
+automatic differentiation, tokenization, the transformer block, and inference arithmetic. It also bundles the Deep
+Learning Systems homework that pairs with it. Use its self-check to decide whether you can start at Week 1.
+
 ## Environment Setup
 
 This course uses [MLX](https://github.com/ml-explore/mlx), an array and machine learning framework for Apple silicon. For
@@ -27,7 +32,7 @@ tests compare your implementation with trusted MLX operations and model implemen
 
 ## Course Structure
 
-This course is divided into four weeks. We will serve Qwen3 MLX models, optimize the serving path, and use it to build a
+After the optional Week 0 prerequisites, this course is divided into four weeks. We will serve Qwen3 MLX models, optimize the serving path, and use it to build a
 small coding agent.
 
 - Week 1: Serve Qwen3 using array and matrix operations written in Python.
