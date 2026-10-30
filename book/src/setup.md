@@ -17,9 +17,12 @@ The repository is organized as follows:
 ```
 src/tiny_llm/ -- your implementation
 src/tiny_llm_ref/ -- the reference implementation
+src/tiny_llm_week0/ -- your Week 0 prerequisite exercises
+src/tiny_llm_week0_ref/ -- the Week 0 reference solution
 tests/ -- unit tests for your implementation
 tests_refsol/ -- unit tests for the reference implementation
 book/ -- the book source
+prereqs/ -- Week 0 external homework (Git submodules)
 ```
 
 Reference implementations are available if you get stuck during the course.

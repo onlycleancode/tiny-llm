@@ -12,8 +12,9 @@ def validate_week_day(args, required=False):
     if week_provided != day_provided or (required and not week_provided):
         print("Please provide both week and day")
         return False
-    if week_provided and (args.week <= 0 or args.day <= 0):
-        print("Week and day must be positive integers")
+    # Week 0 is the prerequisites track; days always start at 1.
+    if week_provided and (args.week < 0 or args.day <= 0):
+        print("Week must be a non-negative integer and day a positive integer")
         return False
     return True
 

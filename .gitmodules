@@ -1,0 +1,6 @@
+[submodule "prereqs/dlsys-hw0"]
+	path = prereqs/dlsys-hw0
+	url = https://github.com/dlsyscourse/hw0
+[submodule "prereqs/dlsys-hw1"]
+	path = prereqs/dlsys-hw1
+	url = https://github.com/dlsyscourse/hw1

@@ -55,6 +55,13 @@ pdm run test --week 2 --day 3 -- -k task_3
 pdm run test --week 2 --day 3 -- -k gpu
 ```
 
+Run the Week 0 prerequisites (NumPy only, no native extensions needed):
+
+```bash
+pdm run test --week 0 --day <DAY>
+pdm run test-refsol --week 0 --day <DAY>
+```
+
 Run reference-solution tests:
 
 ```bash
